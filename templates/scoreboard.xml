@@ -1,8 +1,8 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
     <div class="row">
-        <div class="col-md-4 col-md-offset-4 jumbotron" style="padding:10px">
-            <p><h2 class="form-signin-heading" style="text-align:center">Score Board</h2></p>
+        <div class="col-md-4 col-md-offset-4 jumbotron block">
+            <p><h2 class="form-signin-heading title-__text_block">Score Board</h2></p>
             <table class="table table-hover">
                 <thead>
                     <td>#</td>
@@ -12,7 +12,7 @@
                 <tbody id="table">
                 </tbody>
             </table>
-            <a type="button" class="btn btn-danger btn-block" style="margin-top:10px" href="#">Back</a>
+            <a type="button" class="btn btn-danger btn-block button__menu" href="#">Back</a>
         </div>
     </div>
 </fest:template>

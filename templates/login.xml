@@ -1,12 +1,12 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
     <div class="row">
-        <div class="col-md-4 col-md-offset-4 jumbotron" style="padding:10px">
+        <div class="col-md-4 col-md-offset-4 block jumbotron">
             <form class="js-submit form-signin">
                 <div class="js-alert"></div>
-                <h2 class="form-signin-heading" style="text-align:center; margin-bottom:20px">Please sign in</h2>
-                <label for="inputEmail" class="sr-only">Login</label>
-                <input name="login" type="text" id="inputEmail" class="js-email form-control" placeholder="Login" required="" autofocus=""/>
+                <h2 class="form-signin-heading title__text">Please sign in</h2>
+                <label for="login" class="sr-only">Login</label>
+                <input name="login" type="text" id="login" class="form-control" placeholder="Login" required="" autofocus=""/>
                 <br/>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input name="password" type="password" id="inputPassword" class="js-password form-control" placeholder="Password" required=""/>
@@ -17,7 +17,7 @@
                     </label>
                 </div>
                 <button class="btn btn-success btn-block" type="submit">Sign in</button>
-                <a type="button" class="btn btn-danger btn-block" style="margin-top:10px" href="#">Back</a>
+                <a type="button" class="btn btn-danger btn-block button__menu" href="#">Back</a>
             </form>
         </div>
     </div>

@@ -1936,7 +1936,7 @@ var requirejs, require, define;
     if (isBrowser && !cfg.skipDataMain) {
         //Figure out baseUrl. Get it from the script tag with require.js in it.
         eachReverse(scripts(), function (script) {
-            //Set the 'head' where we can append children by
+            //Set the 'title' where we can append children by
             //using the script's parent.
             if (!head) {
                 head = script.parentNode;

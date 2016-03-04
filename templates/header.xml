@@ -1,8 +1,8 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <div id="header" class="container-fluid">
         <div class="row page-header">
-            <div class="col-md-4 col-md-offset-4" style="text-align:center">
-                <h1>iota</h1>
+            <div class="col-md-4 col-md-offset-4">
+                <h1 class="title__text">iota</h1>
             </div>
         </div>
     </div>

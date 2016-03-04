@@ -2,17 +2,17 @@
     <fest:include src="./header.xml"/>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <div class="btn-group-vertical btn-group-lg" role="group" style="display:inline">
+            <div class="btn-group-vertical btn-group-lg block" role="group">
                 <fest:if test="json.isAuth">
-                    <a type="button" class="btn btn-success" style="margin:10px" href="/#game">Start Game</a>
+                    <a type="button" class="btn btn-success button__menu" href="/#game">Start Game</a>
                 </fest:if>
-                <a type="button" class="btn btn-primary" style="margin:10px" href="/#scoreboard">Score Board</a>
+                <a type="button" class="btn btn-primary button__menu" href="/#scoreboard">Score Board</a>
                 <fest:if test="!json.isAuth">
-                    <a type="button" class="btn btn-primary" style="margin:10px" href="/#login">Log In</a>
-                    <a type="button" class="btn btn-primary" style="margin:10px" href="/#registration">Registration</a>
+                    <a type="button" class="btn btn-primary button__menu" href="/#login">Log In</a>
+                    <a type="button" class="btn btn-primary button__menu" href="/#registration">Registration</a>
                 </fest:if>
                 <fest:if test="json.isAuth">
-                    <a type="button" class="btn btn-success" style="margin:10px" href="/#logout">Logout</a>
+                    <a type="button" class="btn btn-success button__menu" href="/#logout">Logout</a>
                 </fest:if>
             </div>
         </div>
