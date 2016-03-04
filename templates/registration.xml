@@ -29,7 +29,7 @@
                         <input required="" type="password" class="form-control" name="confirm_password" id="confpasswd" placeholder="Confim password"/>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success btn-block" style="text-area:center">Submit</button>
+                <button type="submit" class="btn btn-success btn-block btn-lg" style="text-area:center">Submit</button>
                 <a type="button" class="btn btn-danger btn-block" style="margin-top:10px" href="#">Back</a>
             </form>
         </div>

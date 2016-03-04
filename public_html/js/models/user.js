@@ -1,15 +1,14 @@
-define([
-    'backbone',
-    'jquery',
-    'messaging_center'
-], function (
-    Backbone,
-    $,
-    messagingCenter
-) {
+define(function (require) {
 
+    var Backbone = require('backbone');
+    var $ = require('jquery');
+    var messagingCenter = require('messaging_center');
+
+    //noinspection UnnecessaryLocalVariableJS
     var UserModel = Backbone.Model.extend({
+
         userUrl: '/api/user/',
+
         get: function (id) {
             $.ajax({
                 method: 'GET',
@@ -22,6 +21,7 @@ define([
                 }
             });
         },
+
         delete: function (id) {
             $.ajax({
                 method: 'DELETE',
@@ -29,11 +29,12 @@ define([
                 success: function (data) {
                     console.log(data);
                 },
-                error: function() {
+                error: function () {
                     console.log(data);
                 }
             });
         },
+
         create: function (login, password, email) {
             $.ajax({
                 method: 'POST',
@@ -57,6 +58,7 @@ define([
                 }
             });
         },
+
         update: function (login, password, email) {
             $.ajax({
                 method: 'POST',
@@ -76,6 +78,7 @@ define([
                 }
             });
         }
+
     });
 
     return UserModel;

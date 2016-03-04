@@ -1,16 +1,15 @@
-define([
-    'backbone',
-    'jquery',
-    'messaging_center'
-], function (
-    Backbone,
-    $,
-    messagingCenter
-) {
+define(function (require) {
 
+    var Backbone = require('backbone');
+    var $ = require('jquery');
+    var messagingCenter = require('messaging_center');
+
+    //noinspection UnnecessaryLocalVariableJS
     var SessionModel = Backbone.Model.extend({
+
         sessionUrl: '/api/session/',
         isAuth: false,
+
         login: function (login, password) {
             var self = this;
             $.ajax({
@@ -37,6 +36,7 @@ define([
                 }
             });
         },
+
         logout: function () {
             var self = this;
             $.ajax({
@@ -64,12 +64,14 @@ define([
                     console.log("First: " + self.isAuth);
                     messagingCenter.trigger('authChecked', 'Вход выполнен');
                 },
+                
                 error: function (data) {
                     console.log(data);
                     messagingCenter.trigger('authChecked', 'Необходимо выполненить вход');
                 }
             });
         }
+
     });
 
     return SessionModel;

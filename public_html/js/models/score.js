@@ -1,9 +1,8 @@
-define([
-    'backbone'
-], function(
-    Backbone
-){
+define(function (require) {
 
+    var Backbone = require('backbone');
+
+    //noinspection UnnecessaryLocalVariableJS
     var Model = Backbone.Model.extend({
         defaults: {
             name: '',
@@ -12,4 +11,5 @@ define([
     });
 
     return Model;
+
 });
