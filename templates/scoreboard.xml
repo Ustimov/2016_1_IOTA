@@ -1,11 +1,11 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
-    <div class="grid__row">
-        <div class="grid__col grid__col_4 grid__col-offset_4 block__jumbotron">
+    <div>
+        <div>
             <p>
-                <h2 class="title__text title__text_block">Score Board</h2>
+                <h2>Score Board</h2>
             </p>
-            <table class="table table_hover">
+            <table>
                 <thead>
                     <td>#</td>
                     <td>Name</td>
@@ -14,7 +14,7 @@
                 <tbody id="table">
                 </tbody>
             </table>
-            <a type="button" class="button button_danger button_block button__menu" href="#">Back</a>
+            <a type="button" href="#">Back</a>
         </div>
     </div>
 </fest:template>

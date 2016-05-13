@@ -1,25 +1,25 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
-    <div class="grid__row">
-        <div class="grid__col grid__col_4 grid__col-offset_4 block__jumbotron">
+    <div>
+        <div>
             <form class="js-submit">
                 <div class="js-alert"></div>
-                <h2 class="title__text title__text_block">Please sign in</h2>
+                <h2>Please sign in</h2>
                 <label for="inputLogin" class="sr-only">Login</label>
-                <input name="login" type="text" id="inputLogin" class="js-login form__control" placeholder="Login"
+                <input name="login" type="text" id="inputLogin" class="js-login" placeholder="Login"
                        required="" autofocus=""/>
                 <br/>
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input name="password" type="password" id="inputPassword" class="js-password form__control"
+                <input name="password" type="password" id="inputPassword" class="js-password"
                        placeholder="Password" required=""/>
-                <div class="form__checkbox">
+                <div>
                     <label>
                         <input type="checkbox" value="remember-me"/>
                         Remember me
                     </label>
                 </div>
-                <button class="button button_success button-block" type="submit">Sign in</button>
-                <a type="button" class="button button_danger button-block" href="#">Back</a>
+                <button type="submit">Sign in</button>
+                <a type="button" href="#">Back</a>
             </form>
         </div>
     </div>

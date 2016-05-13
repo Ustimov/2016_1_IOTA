@@ -1,12 +1,12 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
-    <div class="grid__row">
-        <div class="grid__col_4 grid__col-offset_4">
-            <div class="button__group button__group_vertical" role="group" style="display:inline">
-                <a type="button" class="button button_success button__menu button_lg" href="/#game">Start Game</a>
-                <a type="button" class="button button_primary button__menu button_lg" href="/#scoreboard">Score Board
+    <div>
+        <div>
+            <div role="group" style="display:inline">
+                <a type="button" href="/#game">Start Game</a>
+                <a type="button" href="/#scoreboard">Score Board
                 </a>
-                <a type="button" class="button button_success button__menu button_lg" href="/#logout">Logout</a>
+                <a type="button" href="/#logout">Logout</a>
             </div>
         </div>
     </div>
