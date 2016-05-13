@@ -2,13 +2,10 @@
     <fest:include src="./header.xml"/>
     <div>
         <div>
-            <divrole="group">
-                <a type="button" href="/#scoreboard">Score Board
-                </a>
-                <a type="button" href="/#login">Log In</a>
-                <a type="button" href="/#registration">
-                    Registration
-                </a>
+            <div>
+                <a type="button" class="button" href="/#scoreboard">Score Board</a>
+                <a type="button" class="button" href="/#login">Log In</a>
+                <a type="button" class="button" href="/#registration">Registration</a>
             </div>
         </div>
     </div>
