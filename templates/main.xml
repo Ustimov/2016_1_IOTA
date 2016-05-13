@@ -1,12 +1,10 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
-    <div>
-        <div>
-            <div>
-                <a type="button" class="button" href="/#scoreboard">Score Board</a>
-                <a type="button" class="button" href="/#login">Log In</a>
-                <a type="button" class="button" href="/#registration">Registration</a>
-            </div>
-        </div>
+    <div class="container">
+        <ul class="menu">
+            <li class="menu_item button"><a  class="link" href="/#scoreboard">Score Board</a></li>
+            <li class="menu_item button"><a class="link" href="/#login">Log In</a></li>
+            <li class="menu_item button"><a class="link" href="/#registration">Registration</a></li>
+        </ul>
     </div>
 </fest:template>

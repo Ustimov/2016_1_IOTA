@@ -1,26 +1,31 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
-    <div>
-        <div>
-            <form class="js-submit">
-                <div class="js-alert"></div>
-                <h2>Please sign in</h2>
-                <label for="inputLogin" class="sr-only">Login</label>
-                <input name="login" type="text" id="inputLogin" class="js-login" placeholder="Login"
-                       required="" autofocus=""/>
-                <br/>
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input name="password" type="password" id="inputPassword" class="js-password"
-                       placeholder="Password" required=""/>
+    <div class="container">
+        <form class="js-submit leftpad">
+            <h2>Please sign in</h2>
+            <div class="js-alert"></div>
+            <div class="form_group">
                 <div>
-                    <label>
-                        <input type="checkbox" value="remember-me"/>
-                        Remember me
-                    </label>
+                    <label for="inputLogin">Login</label>
                 </div>
-                <button type="submit">Sign in</button>
-                <a type="button" href="#">Back</a>
-            </form>
-        </div>
+                <input name="login" type="text" id="inputLogin" class="js-login form_input" placeholder="Login"
+                       required="" autofocus=""/>
+            </div>
+            <div class="form_group">
+                <div>
+                    <label for="inputPassword">Password</label>
+                </div>
+                <input name="password" type="password" id="inputPassword" class="js-password form_input"
+                           placeholder="Password" required=""/>
+            </div>
+            <div class="form_group">
+                <label>
+                    <input type="checkbox" value="remember-me"/>
+                    Remember me
+                </label>
+            </div>
+            <button type="submit" class="submit">Sign in</button>
+            <div class="button"><a class="link" href="#">Back</a></div>
+        </form>
     </div>
 </fest:template>

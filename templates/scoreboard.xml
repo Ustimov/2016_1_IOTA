@@ -1,6 +1,6 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
-    <div>
+    <div class="container leftpad">
         <div>
             <p>
                 <h2>Score Board</h2>
@@ -14,7 +14,7 @@
                 <tbody id="table">
                 </tbody>
             </table>
-            <a type="button" href="#">Back</a>
+            <div class="button"><a class="link" href="#">Back</a></div>
         </div>
     </div>
 </fest:template>

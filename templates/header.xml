@@ -1,9 +1,6 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <div id="header">
-        <div>
-            <div>
-                <h1>iota</h1>
-            </div>
-        </div>
+    <div id="header" class="header">
+        <h1>iota</h1>
     </div>
+    <hr/>
 </fest:template>

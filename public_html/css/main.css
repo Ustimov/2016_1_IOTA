@@ -1,4 +1,62 @@
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: black;
+}
+
+.menu {
+    display: block;
+}
+
+.menu_item {
+    list-style-type: none;
+}
+
 .button {
+    width: 200px;
     background-color: deepskyblue;
     border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -150px;
+}
+
+.header {
+    text-align: center;
+}
+
+.form_input {
+    border-radius: 5px;
+    height: 30px;
+    width: 220px;
+}
+
+.submit {
+    width: 220px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.form_group {
+    margin: 5px;
+}
+
+.leftpad {
+    padding-left: 50px;
 }

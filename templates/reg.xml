@@ -1,43 +1,39 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
-    <div>
-        <div>
-            <p>
-                <h2>Registration</h2>
-            </p>
-            <form class="js-submit">
-                <div class="js-alert"></div>
+    <div class="container">
+        <form class="js-submit leftpad">
+            <h2>Registration</h2>
+            <div class="js-alert"></div>
+            <div class="form_group">
                 <div>
                     <label for="name">Login</label>
-                    <div>
-                        <input required="" type="text" name="login" id="name"
-                               placeholder="Name"/>
-                    </div>
                 </div>
+                <input required="" type="text" name="login" id="name" class="form_input"
+                           placeholder="Name"/>
+            </div>
+            <div class="form_group">
                 <div>
                     <label>Email</label>
-                    <div class="col-sm-9">
-                        <input required="" type="email" class="js-email" name="email" id="email"
-                               placeholder="Email"/>
-                    </div>
                 </div>
+                <input required="" type="email" class="js-email form_input" name="email" id="email"
+                           placeholder="Email"/>
+            </div>
+            <div class="form_group">
                 <div>
                     <label for="passwd">Password</label>
-                    <div>
-                        <input required="" type="password" class="js-password" name="password" id="passwd"
-                               placeholder="Password"/>
-                    </div>
                 </div>
+                <input required="" type="password" class="js-password form_input" name="password" id="passwd"
+                       placeholder="Password"/>
+            </div>
+            <div class="form_group">
                 <div>
                     <label for="confpasswd">Confim Password</label>
-                    <div >
-                        <input required="" type="password" class="js-password2" name="confirm_password"
-                               id="confpasswd" placeholder="Confim password"/>
-                    </div>
                 </div>
-                <button type="submit">Submit</button>
-                <a type="button" href="#">Back</a>
-            </form>
-        </div>
+                    <input required="" type="password" class="js-password2 form_input" name="confirm_password"
+                           id="confpasswd" placeholder="Confim password"/>
+            </div>
+            <button type="submit" class="submit">Sign in</button>
+            <div class="button"><a class="link" href="#">Back</a></div>
+        </form>
     </div>
 </fest:template>

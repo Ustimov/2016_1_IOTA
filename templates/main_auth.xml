@@ -1,13 +1,8 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:include src="./header.xml"/>
-    <div>
         <div>
-            <div role="group" style="display:inline">
-                <a type="button" href="/#game">Start Game</a>
-                <a type="button" href="/#scoreboard">Score Board
-                </a>
-                <a type="button" href="/#logout">Logout</a>
-            </div>
+            <a type="button" href="/#game">Start Game</a>
+            <a type="button" href="/#scoreboard">Score Board</a>
+            <a type="button" href="/#logout">Logout</a>
         </div>
-    </div>
 </fest:template>
