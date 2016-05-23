@@ -44,7 +44,9 @@ define(function (require) {
                 success: function (model, response) {
                     console.log(response);
                     if (response.__ok) {
-                        model.trigger('registerOk');
+                        //model.trigger('registerOk');
+                        model.trigger('waitLogin');
+                        console.log('wait login sent');
                     } else {
                         model.trigger('registerError', 'Ошибка регистрации');
                     }

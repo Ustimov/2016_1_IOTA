@@ -4,7 +4,7 @@ var express = require('express'),
     proxy = require('http-proxy-middleware');
 
 var HOSTNAME = 'localhost',
-    PORT = 8000,
+    PORT = 9000,
     PUBLIC_DIR = __dirname + '/public_html';
 
 app
