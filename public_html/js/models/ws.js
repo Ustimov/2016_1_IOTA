@@ -9,7 +9,7 @@ define(function (require) {
             var self = this;
             var attempts = 1;
 
-            this.socket = new WebSocket('ws://' + window.location.hostname + ':' + window.location.port + '/api/ws');
+            this.socket = new WebSocket('wss://' + window.location.hostname + ':' + window.location.port + '/api/ws');
 
             this.socket.onopen = function() {
                 attempts = 1;
