@@ -14,15 +14,29 @@ define(function (require) {
             this.score = score;
         }
 
-        Score.prototype.update = function (name, score) {
+        Score.prototype.update = function (name, score, isTurnPlayer, isCurrentPlayer) {
             this.name = name;
             this.score = score;
+            this.isTurnPlayer = isTurnPlayer;
+            this.isCurrentPlayer = isCurrentPlayer;
         };
 
         Score.prototype.draw = function (canvas) {
+            if (!this.name) {
+                return;
+            }
             var context = canvas.getContext('2d');
-            context.font = "30px Verdana";
-            context.fillText(this.name + ': ' + this.score, this.x, this.y, this.width);
+            context.font = "18px Courier New";
+            if (this.isCurrentPlayer) {
+                context.font = "bold " + context.font;
+            }
+            var printName = this.name;
+            if (this.isTurnPlayer) {
+                printName = "-> " + printName;
+            } else {
+                printName = "   " + printName;
+            }
+            context.fillText(printName + ': ' + this.score, this.x, this.y, this.width);
         };
 
         return Score;

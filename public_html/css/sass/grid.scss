@@ -1,6 +1,7 @@
 .grid {
   @for $col from 1 to 13 {
     &__col_#{$col} {
+      float: left;
       width: 100% / 12 * $col;
     }
     &__col-offset_#{$col} {
@@ -8,7 +9,18 @@
     }
   }
 
+  @for $str from 1 to 11 {
+    &__str_#{$str} {
+      position: relative;
+      height: 100% / 10 * $str;
+    }
+    &__str-offset_#{$str} {
+      margin-top: 100% / 10 * $str;
+    }
+  }
+
   &__container {
+    box-sizing: border-box;
     &_fluid {
       padding-right: 15px;
       padding-left: 15px;

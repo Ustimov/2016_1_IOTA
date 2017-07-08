@@ -3,12 +3,14 @@ define(function (require) {
     var Backbone = require('backbone'),
         BaseView = require('views/base'),
         tmpl = require('tmpl/reg'),
-        user = require('models/user');
+        session = require('models/session');
 
     //noinspection UnnecessaryLocalVariableJS
     var RegistrationView = BaseView.extend({
 
         template: tmpl,
+
+        attributes: {class: "grid__str_10"},
 
         events: {
             'submit .js-submit': 'register'
@@ -17,6 +19,8 @@ define(function (require) {
         initialize: function () {
             this.listenTo(user, 'registerOk', this.registerOk);
             this.listenTo(user, 'registerError', this.registerError);
+            this.listenTo(session, 'loginOk', this.loginOk);
+            this.listenTo(session, 'loginError', this.loginError);
             this.render();
         },
 
@@ -27,6 +31,7 @@ define(function (require) {
             this.$email = this.$('.js-email');
             this.$password = this.$('.js-password');
             this.$password2 = this.$('.js-password2');
+            this.$bday = this.$('.js-bday');
         },
 
         register: function (event) {
@@ -50,20 +55,27 @@ define(function (require) {
                 return;
             }
 
-            user.create(this.$login.val(), this.$password.val(), this.$email.val());
+            user.create(this.$login.val(), this.$password.val(), this.$email.val(), this.$bday.val());
         },
 
         registerError: function (errorMsg) {
             this.$alert.html(errorMsg);
         },
 
-        registerOk: function () {
+        loginError: function (errorMsg) {
+            this.$alert.html(errorMsg);
+        },
+
+        loginOk: function () {
             this.$login.val('');
             this.$email.val('');
             this.$password.val('');
             this.$password2.val('');
-        }
+        },
 
+        registerOk: function () {
+            session.login(this.$login.val(), this.$password.val());
+        }
     });
 
     return RegistrationView;

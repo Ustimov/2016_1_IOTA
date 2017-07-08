@@ -1,12 +1,65 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:include src="./header.xml"/>
-    <div class="grid__row">
-        <div class="grid__col_4 grid__col-offset_4">
-            <div class="button__group button__group_vertical" role="group">
-                <a type="button" class="button button_success button__menu button_lg" href="/#game">Start Game</a>
-                <a type="button" class="button button_primary button__menu button_lg" href="/#scoreboard">Score Board
+    <div id = "ruleModal2" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Правила игры</h3>
+                </div>
+                <div class="modal-body">
+                    <h4 style="text-align:center">Компоненты игры</h4>
+                    <p>64 уникальные карты<br/>2 карты джокера<br/>Правила игры</p>
+                    <h4 style="text-align:center">Цель игры</h4>
+                    <p>Получить как можно больше победных очков, составляя вертикальные и горизонтальные линии по определённым правилам.</p>
+                    <p><b style="font-weight:bold;">Линия</b><fest:space/>состоит из 2, 3 или 4 карт, выложенных по горизонтали или вертикали, причём у всех карт в линии значение каждого из признаков (цвет, форма и число) должно быть или одинаковым для всех карт или совершенно разным для всех карт.</p>
+                    <p><b style="font-weight: bold;">Цепочка</b><fest:space/> – это линия из 4 карт.</p>
+                    <h4 style="text-align:center">Как играть</h4>
+                    <p><b style="font-weight: bold;">1. Выложить 1, 2, 3 или 4 карты</b><fest:space/> в линию по правилам</p>
+                    <p>или</p>
+                    <p><b style="font-weight: bold;">2. Пропустить ход.</b><fest:space/> Пропуская ход, вы можете положить любое количество карт из руки (от 1 до 4) под низ колоды и взять из неё соответствующее количество карт взамен. Менять таким образом карты не обязательно.</p>
+                    <h4 style="text-align:center">Правила выкладывания линий</h4>
+                    <p>Выкладывая карты в линию, вы должны соблюдать три условия:</p>
+                    <p><b style="font-weight: bold;">1. Сторона.</b><fest:space/> Каждая из выкладываемых карт должна хотя бы одной из сторон касаться уже лежащей на столе карты.</p>
+                    <p><b style="font-weight: bold;">2. Линия.</b><fest:space/>Вы можете:<br/>• создать/продолжить линию с одной стороны от ранее выложенной карты,<br/>• создать/продолжить линию с двух стороны от ранее выложенной карты</p>
+                    <p>При этом у вас могут возникать и/или продолжаться и другие линии</p>
+                    <p><b style="font-weight: bold;">3. Признаки.</b><fest:space/> У карт в одной линии каждый из признаков (цвет, форма и число), рассмотренных по отдельности, должен быть или одинаковым для всех карт, или совсем разным для всех карт – смотрите </p>
+                    <h4 style="text-align:center">Подсчёт очков</h4>
+                    <p>После каждого хода, подсчитайте количество очков за каждую линию, созданную или продолженную вами в этот ход – для этого сложите числа, указанные на картах в линии. </p>
+                    <h4 style="text-align:center">Конец игры</h4>
+                    <p>Игра завершается, когда заканчивается стопка карт и один из игроков выкладывает свою последнюю карту. Если вы выложили последнюю карту, удвойте количество очков за этот ход. Тот, кто набрал больше всего очков – выигрывает</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Вернуться</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <i class="glyphicon glyphicon-knight"></i><fest:space/> iota game
                 </a>
-                <a type="button" class="button button_success button__menu button_lg" href="/#logout">Logout</a>
+            </div>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ruleModal2">
+                            <i class="glyphicon glyphicon-paperclip"></i><fest:space/> Правила игры
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <a type="button" class="btn btn-primary btn-lg btn-block" href="#game"><i class="glyphicon glyphicon-play"></i><fest:space/> Начать игру</a>
+                        <a type="button" class="btn btn-primary btn-lg btn-block" href="#logout"><i class="glyphicon glyphicon-log-out"></i><fest:space/> Выйти</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

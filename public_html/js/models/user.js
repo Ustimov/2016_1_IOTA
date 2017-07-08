@@ -11,6 +11,10 @@ define(function (require) {
             id: -1
         },
 
+        setId: function (id) {
+            this.set('id', id);
+        },
+
         read: function () {
             this.fetch({
                 url: this.url + '/' + this.get('id'),

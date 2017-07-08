@@ -1,0 +1,3 @@
+sudo npm install -g requirejs
+sudo npm install almond
+r.js -o build.js

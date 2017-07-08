@@ -11,10 +11,10 @@ preload(
     "/images/rc3.png",
     "/images/rc4.png",
 
-    "/images/rr1.png",
-    "/images/rr2.png",
-    "/images/rr3.png",
-    "/images/rr4.png",
+    "/images/rs1.png",
+    "/images/rs2.png",
+    "/images/rs3.png",
+    "/images/rs4.png",
 
     "/images/rt1.png",
     "/images/rt2.png",
@@ -31,10 +31,10 @@ preload(
     "/images/gc3.png",
     "/images/gc4.png",
 
-    "/images/gr1.png",
-    "/images/gr2.png",
-    "/images/gr3.png",
-    "/images/gr4.png",
+    "/images/gs1.png",
+    "/images/gs2.png",
+    "/images/gs3.png",
+    "/images/gs4.png",
 
     "/images/gt1.png",
     "/images/gt2.png",
@@ -51,10 +51,10 @@ preload(
     "/images/bc3.png",
     "/images/bc4.png",
 
-    "/images/br1.png",
-    "/images/br2.png",
-    "/images/br3.png",
-    "/images/br4.png",
+    "/images/bs1.png",
+    "/images/bs2.png",
+    "/images/bs3.png",
+    "/images/bs4.png",
 
     "/images/bt1.png",
     "/images/bt2.png",
@@ -71,10 +71,10 @@ preload(
     "/images/yc3.png",
     "/images/yc4.png",
 
-    "/images/yr1.png",
-    "/images/yr2.png",
-    "/images/yr3.png",
-    "/images/yr4.png",
+    "/images/ys1.png",
+    "/images/ys2.png",
+    "/images/ys3.png",
+    "/images/ys4.png",
 
     "/images/yt1.png",
     "/images/yt2.png",
@@ -86,5 +86,6 @@ preload(
     "/images/yx3.png",
     "/images/yx4.png",
 
-    "/images/super.png"
+    "/images/super.png",
+    "/images/back.png"
 );

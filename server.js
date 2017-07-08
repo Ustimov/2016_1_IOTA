@@ -1,34 +1,27 @@
-var express = require('express'),
+var fs = require('fs')
+    https = require('https')
+    express = require('express'),
     errorHandler = require('errorhandler'),
     app = express(),
-    proxy = require('express-http-proxy');
+    proxy = require('http-proxy-middleware');
 
 var HOSTNAME = 'localhost',
-    PORT = 8000,
+    PORT = 9000,
     PUBLIC_DIR = __dirname + '/public_html';
-
-var count = 0;
-
-app.use(function (req, res, next) {
-    // Здесь нужно написать журналирование в формате
-    // (журналирование - вывод в консоль)
-    // [время] [номер запроса по счету]
-    console.log('[%s] [%s]', (new Date()).toLocaleString(), count++);
-    next();
-});
 
 app
     .use('/', express.static(PUBLIC_DIR))
     .use(errorHandler());
 
-app.listen(PORT, function () {
-    console.log("Simple static server showing %s listening at http://%s:%s", PUBLIC_DIR, HOSTNAME, PORT);
+var options = {
+    key: fs.readFileSync(__dirname + '/protected/server.key'),
+    cert: fs.readFileSync(__dirname + '/protected/server.crt')
+}
+
+app.use('/api', proxy('https://api.iota.su', {changeOrigin: true, secure: false, ssl: options, ws: true}));
+
+https.createServer(options, app).listen(PORT, function () {
+    console.log("Simple static server showing %s listening at https://%s:%s", PUBLIC_DIR, HOSTNAME, PORT);
 });
 
-app.use('/api', proxy('http://127.0.0.1:8080/', {
-    forwardPath: function (req, res) {
-        var url = '/api' + require('url').parse(req.url).path;
-        console.log('Proxy: ' + url);
-        return url;
-    }
-}));
+//app.use('/api', proxy('http://172.16.51.213:8080/', {ws: true}));

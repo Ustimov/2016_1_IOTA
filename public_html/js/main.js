@@ -3,7 +3,8 @@ require.config({
     paths: {
         jquery: "lib/jquery",
         underscore: "lib/underscore",
-        backbone: "lib/backbone"
+        backbone: "lib/backbone",
+        bootstrap: "lib/bootstrap.min"
     },
     shim: {
         'backbone': {
@@ -12,6 +13,9 @@ require.config({
         },
         'underscore': {
             exports: '_'
+        },
+        'bootstrap': {
+            deps: ['jquery']
         }
     }
 });
@@ -20,7 +24,8 @@ define(function (require) {
 
     var Backbone = require('backbone'),
         Router = require('router'),
-        session = require('models/session');
+        session = require('models/session'),
+        boostrap = require('bootstrap');
 
     session.read();
 

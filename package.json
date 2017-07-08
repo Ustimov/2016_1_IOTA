@@ -25,8 +25,8 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "express-http-proxy": "^0.6.0",
     "express-rewrite": "0.0.4",
+    "http-proxy-middleware": "^0.15.0",
     "ws": "^1.0.1"
   }
 }

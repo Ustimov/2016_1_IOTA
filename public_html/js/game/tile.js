@@ -10,9 +10,7 @@ define(function (require) {
 
         function Tile(x, y, width, height) {
             _super.call(this, x, y, width, height);
-            this.validNumbers = ['1'];
-            this.validColors = ['y'];
-            this.validShapes = ['x'];
+            this.possible = false;
         }
 
         Tile.prototype.draw = function (canvas) {
@@ -30,15 +28,16 @@ define(function (require) {
             this.content = card;
         };
 
-        Tile.prototype.canContain = function (card) {
-            return (this.validNumbers.indexOf(card.getNumber()) > -1 && this.validColors.indexOf(card.getColor()) > -1
-            && this.validShapes.indexOf(card.getShape()) > -1);
+        Tile.prototype.unsetContent = function(card) {
+            delete this.content;
         };
 
-        Tile.prototype.setValid = function (numbers, colors, shapes) {
-            this.validColors = colors;
-            this.validNumbers = numbers;
-            this.validShapes = shapes;
+        Tile.prototype.canContain = function () {
+            return (this.content == undefined && this.possible);
+        };
+
+        Tile.prototype.setValid = function (possible) {
+            this.possible = possible;
         };
 
         return Tile;
